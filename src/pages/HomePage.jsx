@@ -76,7 +76,7 @@ function HomePage() {
           Jai Jinendra <HotelIcon />{" "}
         </h1>
         <div className="grid grid-cols-4">
-          <div className="">
+          <div className="mr-2.5">
             <Select
               className="border border-gray-300"
               options={cities.map((city) => ({
@@ -86,30 +86,28 @@ function HomePage() {
               onChange={(selectedOption) => setCity(selectedOption.value)}
             />
           </div>
-          <div  className="">
+          <div className="mr-2.5">
             <input
               type="date"
               value={checkInDate}
               onChange={(e) => setCheckInDate(e.target.value)}
-              className="h-10 px-2 py-1 border border-gray-300 rounded"
+              className="h-10 px-2 py-1 border border-gray-300 rounded mr-2.5"
             />
-          </div >
-          <div className="">
             <input
               type="date"
               value={checkOutDate}
               onChange={(e) => setCheckOutDate(e.target.value)}
-              className="h-10 px-2 py-1 border border-gray-300 rounded"
+              className="h-10 px-2 py-1 border border-gray-300 rounded mr-2.5"
             />
-          </div>
-          <div className="">
-          <button
-            onClick={handleSearch}
-            className="px-2 py-2 bg-blue-500 text-white rounded"
-          >
-            Search
-          </button>
-          </div>
+            <button
+              onClick={handleSearch}
+              className="px-2 py-2 bg-blue-500 text-white rounded"
+            >
+              Search
+            </button>
+          </div >
+          <div></div>
+          <div></div>
         </div>
         <div className="grid sm:grid-cols-3 gap-4 mt-8">
           {dharamshaalas.map((dharamshaala, index) => (
